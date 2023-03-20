@@ -105,7 +105,7 @@ const SignUp = () => {
         <div className="flex justify-center items-center">
           <button
             type="submit"
-            class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-3/5 rounded-full h-10 "
+            class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-3/5 rounded-full h-10 mb-6 md:mb-1"
           >
             Sign Up
           </button>

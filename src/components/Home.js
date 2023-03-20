@@ -45,7 +45,7 @@ function Home() {
             className="transition duration-700 ease-in-out bg-blue-500 hover:bg-blue-400 text-white md:h-20 h-14 md:w-1/4 w-1/2 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
             data-aos="zoom-out"
           >
-            <Link to="/sign-up">SignIn</Link>
+            <Link to="/sign-in">SignIn</Link>
           </button>
         </div>
       </div>
