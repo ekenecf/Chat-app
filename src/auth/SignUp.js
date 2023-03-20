@@ -1,15 +1,21 @@
 import React from 'react'
 import Image from '../images/chatUp.png'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 const SignUp = () => {
+  AOS.init({
+    duration: 1700,
+  })
   return (
     <div className="w-full flex flex-col items-center bg-gradient-to-t from-zinc-300 to-zinc-50 md:flex md:flex-row md:h-screen md:pr-40 md:pl-20 md:pb-8">
-      <div className="w-3/5 ">
+      <div className="w-3/5" data-aos="fade-in" data-aos-delay="50">
         <img src={Image} alt="LogInImge" />
       </div>
       <form class="w-full max-w-lg pl-11 pr-11 pt-8">
         <div class="flex flex-wrap -mx-3 mb-5">
-          <div class="w-full md:w-1/2 px-3 mb-5 md:mb-0">
+          <div class="w-full md:w-1/2 px-3 mb-5 md:mb-0" data-aos="fade-right">
             <label
               class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               for="grid-first-name"
@@ -22,11 +28,11 @@ const SignUp = () => {
               type="text"
               placeholder="Jane"
             />
-            <p class="text-red-500 text-xs italic">
+            <p class="text-red-500 text-xs italic" data-aos="fade-in">
               Please fill out this field.
             </p>
           </div>
-          <div class="w-full md:w-1/2 px-3">
+          <div class="w-full md:w-1/2 px-3" data-aos="fade-left">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 border-red-500">
               Last Name
             </label>
@@ -39,7 +45,7 @@ const SignUp = () => {
           </div>
         </div>
         <div class="flex flex-wrap -mx-3 mb-5">
-          <div class="w-full px-3">
+          <div class="w-full px-3" >
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
               Password
             </label>
@@ -49,7 +55,7 @@ const SignUp = () => {
               type="password"
               placeholder="******************"
             />
-            <p class="text-red-500 text-xs italic mb-4">
+            <p class="text-red-500 text-xs italic mb-4" data-aos="fade-in">
               Please fill out this field.
             </p>
           </div>
@@ -63,7 +69,7 @@ const SignUp = () => {
               type="password"
               placeholder="******************"
             />
-            <p class="text-red-500 text-xs italic">
+            <p class="text-red-500 text-xs italic" data-aos="fade-in">
               Please fill out this field.
             </p>
           </div>
@@ -78,7 +84,7 @@ const SignUp = () => {
               type="text"
               placeholder="Albuquerque"
             />
-            <p class="text-red-500 text-xs italic">
+            <p class="text-red-500 text-xs italic" data-aos="fade-in">
               Please fill out this field.
             </p>
           </div>
@@ -91,7 +97,7 @@ const SignUp = () => {
               type="text"
               placeholder="+1234567890"
             />
-            <p class="text-red-500 text-xs italic">
+            <p class="text-red-500 text-xs italic" data-aos="fade-in">
               Please fill out this field.
             </p>
           </div>
