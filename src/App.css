@@ -7,3 +7,22 @@
 body {
   font-family: 'Lato' 'Poppins' 'Roboto';
 }
+
+
+@media only screen and (min-width: 410px) and (max-width: 767px) {
+  #ChatScreenMainContainer {
+    height: 40%;
+  }
+}
+
+@media only screen and (width:425px) {
+  #ChatScreenMainContainer {
+    height: 40%;
+  }
+}
+
+@media only screen and (width:768px) {
+  #ChatScreenMainContainer {
+    height: 53%;
+  }
+}
