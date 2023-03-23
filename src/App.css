@@ -26,3 +26,7 @@ body {
     height: 53%;
   }
 }
+
+#ProfileComponent {
+  height: 89%;
+}

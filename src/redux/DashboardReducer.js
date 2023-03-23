@@ -3,7 +3,8 @@ export const ActionTypes = {
     // FETCH_DATA_ERROR: 'FETCH_DATA_ERROR',
     // FORGOTPASSWORD: 'FORGOTPASSWORD',
     CHANGEVIEW: 'CHANGEVIEW',
-    PROFILEVIEW: 'PROFILEVIEW'
+    PROFILEVIEW: 'PROFILEVIEW',
+    DROPDOWN: 'DROPDOWN'
   }
 
   export const setChatView = () => ({
@@ -12,10 +13,14 @@ export const ActionTypes = {
   export const setProfileView = () => ({
     type: ActionTypes.PROFILEVIEW,
   })
+  export const setDropDown = () => ({
+    type: ActionTypes.DROPDOWN,
+  })
 
   const initialState = {
     chatView: false,
-    profileView:false
+    profileView:false,
+    dropDown: false,
   }
 
   const DashboardReducer = (state = initialState, { type, payload }) => {
@@ -31,6 +36,12 @@ export const ActionTypes = {
           ...state,
           chatView: false,
           profileView:true
+
+        }
+      case ActionTypes.DROPDOWN:
+        return {
+          ...state,
+          dropDown: !state.dropDown,
 
         }
       default:

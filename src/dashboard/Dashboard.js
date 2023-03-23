@@ -9,7 +9,6 @@ import Profile from './Profile'
 
 const Dashboard = () => {
   const { chatView, profileView } = useSelector((state) => state.DashboardReducer)
-  console.log(profileView)
 
   return (
     <div className="bg-slate-700 h-screen relative">

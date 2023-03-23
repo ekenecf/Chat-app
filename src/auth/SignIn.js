@@ -19,7 +19,7 @@ function SignIn() {
             Login to your account
           </h3>
         </div>
-        <form className="" data-aos="fade-in">
+        <form data-aos="fade-in">
           <div className="mt-4">
             <div>
               <label className="block" htmlFor="email">

@@ -10,7 +10,7 @@ import Dashboard from './dashboard/Dashboard'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App scroll-smooth">
     <Provider store={store}>
       <Router>
         <Routes>
