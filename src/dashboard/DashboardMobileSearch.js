@@ -14,7 +14,6 @@ const DashboardMobileSearch = () => {
       <button
         className="relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
         type="button"
-        data-te-ripple-init
         data-te-ripple-color="light">
         <svg
           xmlns="http://www.w3.org/2000/svg"
