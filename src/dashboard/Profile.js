@@ -5,23 +5,23 @@ import { BsThreeDotsVertical } from 'react-icons/bs'
 import { ImProfile } from 'react-icons/im'
 import { RiArrowDropUpLine, RiArrowDropDownLine } from 'react-icons/ri'
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import { setDropDown } from '../redux/DashboardReducer'
 
 import image from '../images/nature.jpg'
 
 const Profile = () => {
-    AOS.init({
-        duration: 1700,
-      });
-    const dispatch = useDispatch()
+  AOS.init({
+    duration: 1700,
+  })
+  const dispatch = useDispatch()
   const { dropDown } = useSelector((state) => state.DashboardReducer)
   console.log(dropDown)
 
   return (
-    <div className=' overflow-y-auto overscroll-y-auto' id='ProfileComponent'>
+    <div className=" overflow-y-auto overscroll-y-auto" id="ProfileComponent">
       <div className="flex justify-between px-6 pt-7 ">
         <p className="font-semibold text-xl text-slate-300">My Profile</p>
         <BsThreeDotsVertical className="text-slate-50" />
@@ -46,39 +46,31 @@ const Profile = () => {
             <div className="flex justify-start items-center gap-x-2">
               <ImProfile className="text-slate-300" />{' '}
               <p className="text-slate-300">About</p>
-            </div>{
-                dropDown ? <RiArrowDropUpLine className="text-white text-4xl" onClick={() => dispatch(setDropDown())}/>
-                : <RiArrowDropDownLine className="text-white text-4xl" onClick={() => dispatch(setDropDown())}/>
-            }
+            </div>
+            {dropDown ? (
+              <RiArrowDropUpLine
+                className="text-white text-4xl"
+                onClick={() => dispatch(setDropDown())}
+              />
+            ) : (
+              <RiArrowDropDownLine
+                className="text-white text-4xl"
+                onClick={() => dispatch(setDropDown())}
+              />
+            )}
           </div>
-          {
-            dropDown ? <div className='bg-slate-900 pt-4 pl-4 ' data-aos="fade-down">
-            <p className='text-slate-500 font-normal'>
-                Name
-            </p>
-            <p className='text-slate-300 font-semibold'>
-                John Doe Kabiru
-            </p>
-            <p className='text-slate-500 font-normal mt-4'>
-                Email
-            </p>
-            <p className='text-slate-300 font-semibold'>
-                johndoe@email.com
-            </p>
-            <p className='text-slate-500 font-normal mt-4'>
-                Time
-            </p>
-            <p className='text-slate-300 font-semibold'>
-                11:50
-            </p>
-            <p className='text-slate-500 font-normal mt-4'>
-                Time
-            </p>
-            <p className='text-slate-300 font-semibold'>
-                11:50
-            </p>
-          </div> : null
-          }
+          {dropDown ? (
+            <div className="bg-slate-900 pt-4 pl-4 " data-aos="fade-down">
+              <p className="text-slate-500 font-normal">Name</p>
+              <p className="text-slate-300 font-semibold">John Doe Kabiru</p>
+              <p className="text-slate-500 font-normal mt-4">Email</p>
+              <p className="text-slate-300 font-semibold">johndoe@email.com</p>
+              <p className="text-slate-500 font-normal mt-4">Time</p>
+              <p className="text-slate-300 font-semibold pb-4">11:50</p>
+              {/* <p className="text-slate-500 font-normal mt-4">Time</p>
+              <p className="text-slate-300 font-semibold pb-4">11:50</p> */}
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

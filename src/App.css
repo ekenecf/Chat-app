@@ -11,7 +11,7 @@ body {
 
 @media only screen and (min-width: 410px) and (max-width: 767px) {
   #ChatScreenMainContainer {
-    height: 40%;
+    height: 60%;
   }
 }
 
@@ -27,6 +27,6 @@ body {
   }
 }
 
-#ProfileComponent {
-  height: 89%;
+#ProfileComponent, #EditProfileComponent {
+  height: 90%;
 }
