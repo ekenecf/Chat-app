@@ -7,14 +7,17 @@ import ChatScreen from './ChatScreen'
 import DashboardNav from './DashboardNav'
 import Profile from './Profile'
 import EditProfile from './EditProfile'
+import Summary from './Summary'
 
 const Dashboard = () => {
-  const { chatView, profileView, editProfile } = useSelector(
+  const { chatView, profileView, editProfile, summary, brightness } = useSelector(
     (state) => state.DashboardReducer,
   )
+  console.log(brightness)
+
 
   return (
-    <div className="bg-slate-700 h-screen relative">
+    <div className={` h-screen relative ${brightness ? 'bg-slate-100' : 'bg-slate-700' }`}>
       {chatView ? (
         <>
           <p className="p-7 font-semibold text-white text-2xl">Chats</p>
@@ -25,8 +28,10 @@ const Dashboard = () => {
         </>
       ) : profileView ? (
         <Profile />
-      ) : editProfile ? <EditProfile/> : null}
-
+      ) : editProfile ? (
+        <EditProfile />
+      ) : null}
+      {summary ? <Summary /> : null}
       <DashboardNav />
     </div>
   )

@@ -18,7 +18,6 @@ const Profile = () => {
   })
   const dispatch = useDispatch()
   const { dropDown } = useSelector((state) => state.DashboardReducer)
-  console.log(dropDown)
 
   return (
     <div className=" overflow-y-auto overscroll-y-auto" id="ProfileComponent">
@@ -65,10 +64,10 @@ const Profile = () => {
               <p className="text-slate-300 font-semibold">John Doe Kabiru</p>
               <p className="text-slate-500 font-normal mt-4">Email</p>
               <p className="text-slate-300 font-semibold">johndoe@email.com</p>
-              <p className="text-slate-500 font-normal mt-4">Time</p>
-              <p className="text-slate-300 font-semibold pb-4">11:50</p>
-              {/* <p className="text-slate-500 font-normal mt-4">Time</p>
-              <p className="text-slate-300 font-semibold pb-4">11:50</p> */}
+              <p className="text-slate-500 font-normal mt-4">Phone Number</p>
+              <p className="text-slate-300 font-semibold">+123456789011</p>
+              <p className="text-slate-500 font-normal mt-4">Location</p>
+              <p className="text-slate-300 font-semibold pb-4">United States of Africa</p>
             </div>
           ) : null}
         </div>

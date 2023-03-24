@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { BsThreeDotsVertical } from 'react-icons/bs'
 import { ImProfile } from 'react-icons/im'
 import { RiArrowDropUpLine, RiArrowDropDownLine } from 'react-icons/ri'
 import { FiEdit } from 'react-icons/fi'
@@ -32,9 +31,8 @@ const EditProfile = () => {
       className=" overflow-y-auto overscroll-y-auto"
       id="EditProfileComponent"
     >
-      <div className="flex justify-between px-6 pt-7 ">
+      <div className=" px-6 pt-7 ">
         <p className="font-semibold text-xl text-slate-300">Settings</p>
-        <BsThreeDotsVertical className="text-slate-50" />
       </div>
       <div className="flex flex-col justify-center items-center pt-6 ">
         <img
@@ -50,7 +48,7 @@ const EditProfile = () => {
           <div className="flex justify-between items-center h-10 bg-slate-600 pl-4 rounded-t-lg">
             <div className="flex justify-start items-center gap-x-2">
               <ImProfile className="text-slate-300" />{' '}
-              <p className="text-slate-300">About</p>
+              <p className="text-slate-300">Personal Info</p>
             </div>
             {editDropDown ? (
               <RiArrowDropUpLine
@@ -69,9 +67,14 @@ const EditProfile = () => {
               <div className="flex justify-between mr-2">
                 <div>
                   <p className="text-slate-500 font-normal">Name</p>
-                  <p className="text-slate-300 font-semibold">
+                  {
+                    editName ?
+                    <p className="text-slate-300 font-semibold">
                     John Doe Kabiru
                   </p>
+                  : <input /> 
+                  }
+               
                 </div>
                 {editName ? (
                   <FiEdit
@@ -92,8 +95,10 @@ const EditProfile = () => {
               <p className="text-slate-300 font-semibold">johndoe@email.com</p>
               <div className="flex justify-between mr-2">
                 <div>
-                <p className="text-slate-500 font-normal mt-4">Phone Number</p>
-              <p className="text-slate-300 font-semibold">+1234567890</p>
+                  <p className="text-slate-500 font-normal mt-4">
+                    Phone Number
+                  </p>
+                  <p className="text-slate-300 font-semibold">+123456789011</p>
                 </div>
                 {!editNumber ? (
                   <FiEdit
