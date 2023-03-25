@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import Image from '../images/chatUp.png'
 
 import AOS from 'aos'
@@ -11,6 +13,9 @@ const SignUp = () => {
   return (
     <div className="w-full flex flex-col items-center bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-indigo-200 via-slate-600 to-indigo-200 md:flex md:flex-row md:h-screen md:pr-40 md:pl-20 md:pb-8">
       <div className="w-3/5" data-aos="fade-in" data-aos-delay="50">
+        <Link to="/" className="text-lg text-gray-50 hover:underline ">
+          Back to home
+        </Link>
         <img src={Image} alt="LogInImge" />
       </div>
       <form className="w-full max-w-lg pl-11 pr-11 pt-8">
