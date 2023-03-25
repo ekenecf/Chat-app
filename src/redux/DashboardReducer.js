@@ -8,7 +8,7 @@ export const ActionTypes = {
   EDITLOCATION: 'EDITLOCATION',
   EDITNUMBER: 'EDITNUMBER',
   SUMMARY: 'SUMMARY',
-  LIGHTDARK: 'LIGHTDARK'
+  LIGHTDARK: 'LIGHTDARK',
 }
 
 export const setChatView = () => ({
@@ -52,6 +52,7 @@ const initialState = {
   editNumber: false,
   summary: false,
   brightness: false,
+  editLocation:false
 }
 
 const DashboardReducer = (state = initialState, { type, payload }) => {

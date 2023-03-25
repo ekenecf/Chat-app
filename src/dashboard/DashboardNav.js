@@ -4,20 +4,20 @@ import { useDispatch, useSelector } from 'react-redux'
 import { CgProfile } from 'react-icons/cg'
 import { BsFillChatDotsFill } from 'react-icons/bs'
 import { AiFillSetting } from 'react-icons/ai'
-import { MdOutlineLightMode } from 'react-icons/md'
+import { MdOutlineLightMode, MdDarkMode } from 'react-icons/md'
 import image from '../images/nature.jpg'
 import {
   setChatView,
   setProfileView,
   setEditProfile,
   setSummary,
-  setLightDark
+  setLightDark,
 } from '../redux/DashboardReducer'
 
 const DashboardNav = () => {
   const dispatch = useDispatch()
 
-  const { chatView, profileView, editProfile } = useSelector( 
+  const { chatView, profileView, editProfile, brightness } = useSelector(
     (state) => state.DashboardReducer,
   )
 
@@ -48,7 +48,17 @@ const DashboardNav = () => {
         alt="userImg"
         onClick={() => dispatch(setSummary())}
       />
-      <MdOutlineLightMode className='text-slate-900 w-8 h-8' onClick={() => dispatch(setLightDark())}/>
+      {brightness ? (
+        <MdDarkMode
+          className="text-slate-900 w-8 h-8"
+          onClick={() => dispatch(setLightDark())}
+        />
+      ) : (
+        <MdOutlineLightMode
+          className={`${brightness ? 'text-slate-900' : 'text-white'} w-8 h-8`}
+          onClick={() => dispatch(setLightDark())}
+        />
+      )}
     </div>
   )
 }

@@ -1,18 +1,24 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+
 
 const DashboardMobileSearch = () => {
+  const { brightness } = useSelector(
+    (state) => state.DashboardReducer,
+  )
+
   return (
     <div className="flex justify-center">
   <div className="mb-3 xl:w-96 w-11/12">
     <div className="relative mb-4 flex w-full flex-wrap items-stretch">
       <input
         type="search"
-        className="relative m-0 -mr-px block w-[1%] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal text-white outline-none transition duration-300 ease-in-out focus:border-primary focus:text-white focus:shadow-te-primary focus:outline-none dark:text-white dark:placeholder:text-white"
+        className={`relative m-0 -mr-px block w-[1%] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal ${brightness ? 'text-black' : 'text-white'} outline-none transition duration-300 ease-in-out focus:border-primary focus:${brightness ? 'text-black' : 'text-white'} focus:shadow-te-primary focus:outline-none dark:${brightness ? 'text-black' : 'text-white'} dark:placeholder:${brightness ? 'text-black' : 'text-white'}`}
         placeholder="Search users"
         aria-label="Search"
         aria-describedby="button-addon1" />
       <button
-        className="relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
+        className={`relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight ${brightness ? 'text-black' : 'text-white'}  shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg`}
         type="button"
         data-te-ripple-color="light">
         <svg

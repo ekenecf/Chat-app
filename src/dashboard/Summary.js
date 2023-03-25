@@ -8,14 +8,14 @@ import { CgProfile } from 'react-icons/cg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import {
-    setProfileView,
-    setEditProfile,
-    setSummary
-  } from '../redux/DashboardReducer'
+  setProfileView,
+  setEditProfile,
+  setSummary,
+} from '../redux/DashboardReducer'
 
 const Summary = () => {
   AOS.init({
-    duration: 1200,
+    duration: 1150,
   })
   const dispatch = useDispatch()
 
@@ -32,21 +32,30 @@ const Summary = () => {
             onClick={() => dispatch(setSummary())}
           />
         </div>
-        <div className="flex justify-around mb-3"  onClick={() => {
+        <div
+          className="flex justify-around mb-3"
+          onClick={() => {
             dispatch(setProfileView())
             dispatch(setSummary())
-        }}>
+          }}
+        >
           <p className="text-slate-300 font-semibold">Profile</p>
-          <CgProfile className="h-5 w-5 text-slate-500"/>
+          <CgProfile className="h-5 w-5 text-slate-500" />
         </div>
-        <div className="flex justify-around mb-3" onClick={() => {
+        <div
+          className="flex justify-around mb-3"
+          onClick={() => {
             dispatch(setEditProfile())
             dispatch(setSummary())
-        }}>
+          }}
+        >
           <p className="text-slate-300 font-semibold">Settings</p>
           <AiFillSetting className="h-5 w-5 text-slate-500" />
         </div>
-        <div className="flex justify-around mb-3" onClick={() => dispatch(setSummary())}>
+        <div
+          className="flex justify-around mb-3"
+          onClick={() => dispatch(setSummary())}
+        >
           <p className="text-slate-300 font-semibold">Log Out</p>
           <AiOutlineLogout className="h-5 w-5 text-slate-500" />
         </div>

@@ -10,20 +10,39 @@ import EditProfile from './EditProfile'
 import Summary from './Summary'
 
 const Dashboard = () => {
-  const { chatView, profileView, editProfile, summary, brightness } = useSelector(
-    (state) => state.DashboardReducer,
-  )
+  const {
+    chatView,
+    profileView,
+    editProfile,
+    summary,
+    brightness,
+  } = useSelector((state) => state.DashboardReducer)
   console.log(brightness)
 
-
   return (
-    <div className={` h-screen relative ${brightness ? 'bg-slate-100' : 'bg-slate-700' }`}>
+    <div
+      className={` h-screen relative ${
+        brightness ? 'bg-slate-100' : 'bg-slate-700'
+      }`}
+    >
       {chatView ? (
         <>
-          <p className="p-7 font-semibold text-white text-2xl">Chats</p>
+          <p
+            className={`p-7 font-semibold ${
+              brightness ? 'text-black' : 'text-white'
+            }  text-2xl`}
+          >
+            Chats
+          </p>
           <DashboardMobileSearch />
           <ActiveUsers />
-          <p className="mt-5 ml-5 text-lg font-semibold text-white">Recent</p>
+          <p
+            className={`mt-5 ml-5 text-lg font-semibold ${
+              brightness ? 'text-black' : 'text-white'
+            }`}
+          >
+            Recent
+          </p>
           <ChatScreen />
         </>
       ) : profileView ? (
