@@ -8,6 +8,7 @@ import DashboardNav from './DashboardNav'
 import Profile from './Profile'
 import EditProfile from './EditProfile'
 import Summary from './Summary'
+import ChatDisplay from './ChatDisplay'
 
 const Dashboard = () => {
   const {
@@ -16,8 +17,10 @@ const Dashboard = () => {
     editProfile,
     summary,
     brightness,
+    chatDisplay,
   } = useSelector((state) => state.DashboardReducer)
-  console.log(brightness)
+
+  console.log(chatDisplay)
 
   return (
     <div
@@ -50,6 +53,8 @@ const Dashboard = () => {
       ) : editProfile ? (
         <EditProfile />
       ) : null}
+       <ChatDisplay />
+      
       {summary ? <Summary /> : null}
       <DashboardNav />
     </div>

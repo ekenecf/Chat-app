@@ -1,15 +1,17 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
+import { setChatDisplay } from '../redux/DashboardReducer'
 import image from '../images/nature.jpg'
 
 const ChatScreen = () => {
+  const dispatch = useDispatch()
   const { brightness } = useSelector(
     (state) => state.DashboardReducer,
   )
 
   return (
-    <div className="h-2/5 overflow-y-auto overscroll-y-auto mt-4 " id='ChatScreenMainContainer'>
+    <div className="h-2/5 overflow-y-auto overscroll-y-auto mt-4 " id='ChatScreenMainContainer' onClick={() => dispatch(setChatDisplay())}>
       <div className="mt-4 flex justify-between mx-5 items-center">
         <div className="flex justify-between gap-x-3">
           <img

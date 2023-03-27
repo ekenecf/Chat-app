@@ -9,6 +9,7 @@ export const ActionTypes = {
   EDITNUMBER: 'EDITNUMBER',
   SUMMARY: 'SUMMARY',
   LIGHTDARK: 'LIGHTDARK',
+  CHATDISPLAY: 'CHATDISPLAY',
 }
 
 export const setChatView = () => ({
@@ -41,6 +42,9 @@ export const setSummary = () => ({
 export const setLightDark = () => ({
   type: ActionTypes.LIGHTDARK,
 })
+export const setChatDisplay = () => ({
+  type: ActionTypes.CHATDISPLAY,
+})
 
 const initialState = {
   chatView: true,
@@ -52,7 +56,8 @@ const initialState = {
   editNumber: false,
   summary: false,
   brightness: false,
-  editLocation:false
+  editLocation:false,
+  chatDisplay: false
 }
 
 const DashboardReducer = (state = initialState, { type, payload }) => {
@@ -64,6 +69,7 @@ const DashboardReducer = (state = initialState, { type, payload }) => {
         profileView: false,
         editProfile: false,
         editLocation: false,
+        chatDisplay: false,
       }
     case ActionTypes.PROFILEVIEW:
       return {
@@ -113,6 +119,15 @@ const DashboardReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         brightness: !state.brightness,
+      }
+    case ActionTypes.CHATDISPLAY:
+      return {
+        ...state,
+        chatDisplay: true,
+        chatView: false,
+        profileView: false,
+        editProfile: false,
+        editLocation: false,
       }
     default:
       return state
