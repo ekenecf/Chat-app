@@ -16,7 +16,7 @@ const ActiveUsers = () => {
           <small className='absolute right-1 top-6'>🐸</small>
         </div>
 
-        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} text-white`}>Ekeneeme</p>
+        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} `}>Ekeneeme</p>
       </div>
       <div className='relative w-16 h-16 text-center shadow-[6px_4px_6px_6px_#00000024] flex flex-col items-center ml-2 rounded-lg'>
         <div className='flex'>
@@ -24,7 +24,7 @@ const ActiveUsers = () => {
           <small className='absolute right-1 top-6'>🐸</small>
         </div>
 
-        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} text-white`}>Ekeneeme</p>
+        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} `}>Ekeneeme</p>
       </div>
       <div className='relative w-16 h-16 text-center shadow-[6px_4px_6px_6px_#00000024] flex flex-col items-center ml-2 rounded-lg'>
         <div className='flex'>
@@ -32,7 +32,7 @@ const ActiveUsers = () => {
           <small className='absolute right-1 top-6'>🐸</small>
         </div>
 
-        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} text-white`}>Ekeneeme</p>
+        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} `}>Ekeneeme</p>
       </div>
       <div className='relative w-16 h-16 text-center shadow-[6px_4px_6px_6px_#00000024] flex flex-col items-center ml-2 rounded-lg'>
         <div className='flex'>
@@ -40,7 +40,7 @@ const ActiveUsers = () => {
           <small className='absolute right-1 top-6'>🐸</small>
         </div>
 
-        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} text-white`}>Ekeneeme</p>
+        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} `}>Ekeneeme</p>
       </div>
       <div className='relative w-16 h-16 text-center shadow-[6px_4px_6px_6px_#00000024] flex flex-col items-center ml-2 rounded-lg'>
         <div className='flex'>
@@ -48,7 +48,7 @@ const ActiveUsers = () => {
           <small className='absolute right-1 top-6'>🐸</small>
         </div>
 
-        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} text-white`}>Ekeneeme</p>
+        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} `}>Ekeneeme</p>
       </div>
       <div className='relative w-16 h-16 text-center shadow-[6px_4px_6px_6px_#00000024] flex flex-col items-center ml-2 rounded-lg'>
         <div className='flex'>
@@ -56,7 +56,7 @@ const ActiveUsers = () => {
           <small className='absolute right-1 top-6'>🐸</small>
         </div>
 
-        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} text-white`}>Ekeneeme</p>
+        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} `}>Ekeneeme</p>
       </div>
       <div className='relative w-16 h-16 text-center shadow-[6px_4px_6px_6px_#00000024] flex flex-col items-center ml-2 rounded-lg'>
         <div className='flex'>
@@ -64,7 +64,7 @@ const ActiveUsers = () => {
           <small className='absolute right-1 top-6'>🐸</small>
         </div>
 
-        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} text-white`}>Ekeneeme</p>
+        <p className={`text-sm font-semibold ${brightness ? 'text-black' : 'text-white'} `}>Ekeneeme</p>
       </div>
     </div>
   )

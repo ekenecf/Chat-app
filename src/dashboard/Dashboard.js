@@ -9,6 +9,7 @@ import Profile from './Profile'
 import EditProfile from './EditProfile'
 import Summary from './Summary'
 import ChatDisplay from './ChatDisplay'
+import DesktopChatScerrn from './DesktopChatScerrn'
 
 const Dashboard = () => {
   const {
@@ -54,7 +55,7 @@ const Dashboard = () => {
         <EditProfile />
       ) : null}
        <ChatDisplay />
-      
+       <DesktopChatScerrn />
       {summary ? <Summary /> : null}
       <DashboardNav />
     </div>
