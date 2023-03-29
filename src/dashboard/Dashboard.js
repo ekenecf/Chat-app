@@ -54,8 +54,9 @@ const Dashboard = () => {
       ) : editProfile ? (
         <EditProfile />
       ) : null}
-       <ChatDisplay />
-       <DesktopChatScerrn />
+      <ChatDisplay />
+      <DesktopChatScerrn />
+
       {summary ? <Summary /> : null}
       <DashboardNav />
     </div>

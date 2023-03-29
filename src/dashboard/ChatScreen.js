@@ -6,13 +6,25 @@ import image from '../images/nature.jpg'
 
 const ChatScreen = () => {
   const dispatch = useDispatch()
-  const { brightness } = useSelector(
-    (state) => state.DashboardReducer,
-  )
+  const { brightness } = useSelector((state) => state.DashboardReducer)
+  const handleClick = () => {
+    const screenWidth = window.innerWidth
+    if (screenWidth > 768) {
+      return
+    } else {
+      dispatch(setChatDisplay())
+    }
+  }
 
   return (
-    <div className="h-2/5 overflow-y-auto overscroll-y-auto mt-4 " id='ChatScreenMainContainer' onClick={() => dispatch(setChatDisplay())}>
-      <div className="mt-4 flex justify-between mx-5 items-center">
+    <div
+      className="h-2/5 overflow-y-auto overscroll-y-auto mt-4 "
+      id="ChatScreenMainContainer"
+    >
+      <div
+        className="mt-4 flex justify-between mx-5 items-center"
+        onClick={() => handleClick()}
+      >
         <div className="flex justify-between gap-x-3">
           <img
             src={image}
@@ -20,13 +32,118 @@ const ChatScreen = () => {
             alt="userImg"
           />
           <div>
-            <p className={`text-base font-semibold ${brightness ? 'text-black' : 'text-white'}`}>
+            <p
+              className={`text-base font-semibold ${
+                brightness ? 'text-black' : 'text-white'
+              }`}
+            >
               Full Name of user
             </p>
-            <p className={`text-sm ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>Last message of user1</p>
+            <p
+              className={`text-sm ${
+                brightness ? 'text-slate-700' : 'text-slate-400'
+              }`}
+            >
+              Last message of user1
+            </p>
           </div>
         </div>
-        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>MsgTime</p>
+        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>
+          MsgTime
+        </p>
+      </div>
+      <div
+        className="mt-4 flex justify-between mx-5 items-center"
+        onClick={() => handleClick()}
+      >
+        <div className="flex justify-between gap-x-3">
+          <img
+            src={image}
+            className="rounded-full w-10 h-10 relative"
+            alt="userImg"
+          />
+          <div>
+            <p
+              className={`text-base font-semibold ${
+                brightness ? 'text-black' : 'text-white'
+              }`}
+            >
+              Full Name of user
+            </p>
+            <p
+              className={`text-sm ${
+                brightness ? 'text-slate-700' : 'text-slate-400'
+              }`}
+            >
+              Last message of user1
+            </p>
+          </div>
+        </div>
+        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>
+          MsgTime
+        </p>
+      </div>
+      <div
+        className="mt-4 flex justify-between mx-5 items-center"
+        onClick={() => handleClick()}
+      >
+        <div className="flex justify-between gap-x-3">
+          <img
+            src={image}
+            className="rounded-full w-10 h-10 relative"
+            alt="userImg"
+          />
+          <div>
+            <p
+              className={`text-base font-semibold ${
+                brightness ? 'text-black' : 'text-white'
+              }`}
+            >
+              Full Name of user
+            </p>
+            <p
+              className={`text-sm ${
+                brightness ? 'text-slate-700' : 'text-slate-400'
+              }`}
+            >
+              Last message of user1
+            </p>
+          </div>
+        </div>
+        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>
+          MsgTime
+        </p>
+      </div>
+      <div
+        className="mt-4 flex justify-between mx-5 items-center"
+        onClick={() => handleClick()}
+      >
+        <div className="flex justify-between gap-x-3">
+          <img
+            src={image}
+            className="rounded-full w-10 h-10 relative"
+            alt="userImg"
+          />
+          <div>
+            <p
+              className={`text-base font-semibold ${
+                brightness ? 'text-black' : 'text-white'
+              }`}
+            >
+              Full Name of user
+            </p>
+            <p
+              className={`text-sm ${
+                brightness ? 'text-slate-700' : 'text-slate-400'
+              }`}
+            >
+              Last message of user1
+            </p>
+          </div>
+        </div>
+        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>
+          MsgTime
+        </p>
       </div>
       <div className="mt-4 flex justify-between mx-5 items-center">
         <div className="flex justify-between gap-x-3">
@@ -36,13 +153,56 @@ const ChatScreen = () => {
             alt="userImg"
           />
           <div>
-            <p className={`text-base font-semibold ${brightness ? 'text-black' : 'text-white'}`}>
+            <p
+              className={`text-base font-semibold ${
+                brightness ? 'text-black' : 'text-white'
+              }`}
+            >
               Full Name of user
             </p>
-            <p className={`text-sm ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>Last message of user1</p>
+            <p
+              className={`text-sm ${
+                brightness ? 'text-slate-700' : 'text-slate-400'
+              }`}
+            >
+              Last message of user1
+            </p>
           </div>
         </div>
-        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>MsgTime</p>
+        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>
+          MsgTime
+        </p>
+      </div>
+      <div
+        className="mt-4 flex justify-between mx-5 items-center"
+        onClick={() => handleClick()}
+      >
+        <div className="flex justify-between gap-x-3">
+          <img
+            src={image}
+            className="rounded-full w-10 h-10 relative"
+            alt="userImg"
+          />
+          <div>
+            <p
+              className={`text-base font-semibold ${
+                brightness ? 'text-black' : 'text-white'
+              }`}
+            >
+              Full Name of user
+            </p>
+            <p
+              className={`text-sm ${
+                brightness ? 'text-slate-700' : 'text-slate-400'
+              }`}
+            >
+              Last message of user1
+            </p>
+          </div>
+        </div>
+        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>
+          MsgTime
+        </p>
       </div>
       <div className="mt-4 flex justify-between mx-5 items-center">
         <div className="flex justify-between gap-x-3">
@@ -52,15 +212,30 @@ const ChatScreen = () => {
             alt="userImg"
           />
           <div>
-            <p className={`text-base font-semibold ${brightness ? 'text-black' : 'text-white'}`}>
+            <p
+              className={`text-base font-semibold ${
+                brightness ? 'text-black' : 'text-white'
+              }`}
+            >
               Full Name of user
             </p>
-            <p className={`text-sm ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>Last message of user1</p>
+            <p
+              className={`text-sm ${
+                brightness ? 'text-slate-700' : 'text-slate-400'
+              }`}
+            >
+              Last message of user1
+            </p>
           </div>
         </div>
-        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>MsgTime</p>
+        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>
+          MsgTime
+        </p>
       </div>
-      <div className="mt-4 flex justify-between mx-5 items-center">
+      <div
+        className="mt-4 flex justify-between mx-5 items-center"
+        onClick={() => handleClick()}
+      >
         <div className="flex justify-between gap-x-3">
           <img
             src={image}
@@ -68,15 +243,30 @@ const ChatScreen = () => {
             alt="userImg"
           />
           <div>
-            <p className={`text-base font-semibold ${brightness ? 'text-black' : 'text-white'}`}>
+            <p
+              className={`text-base font-semibold ${
+                brightness ? 'text-black' : 'text-white'
+              }`}
+            >
               Full Name of user
             </p>
-            <p className={`text-sm ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>Last message of user1</p>
+            <p
+              className={`text-sm ${
+                brightness ? 'text-slate-700' : 'text-slate-400'
+              }`}
+            >
+              Last message of user1
+            </p>
           </div>
         </div>
-        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>MsgTime</p>
+        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>
+          MsgTime
+        </p>
       </div>
-      <div className="mt-4 flex justify-between mx-5 items-center">
+      <div
+        className="mt-4 flex justify-between mx-5 items-center"
+        onClick={() => handleClick()}
+      >
         <div className="flex justify-between gap-x-3">
           <img
             src={image}
@@ -84,77 +274,25 @@ const ChatScreen = () => {
             alt="userImg"
           />
           <div>
-            <p className={`text-base font-semibold ${brightness ? 'text-black' : 'text-white'}`}>
+            <p
+              className={`text-base font-semibold ${
+                brightness ? 'text-black' : 'text-white'
+              }`}
+            >
               Full Name of user
             </p>
-            <p className={`text-sm ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>Last message of user1</p>
-          </div>
-        </div>
-        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>MsgTime</p>
-      </div>
-      <div className="mt-4 flex justify-between mx-5 items-center">
-        <div className="flex justify-between gap-x-3">
-          <img
-            src={image}
-            className="rounded-full w-10 h-10 relative"
-            alt="userImg"
-          />
-          <div>
-            <p className={`text-base font-semibold ${brightness ? 'text-black' : 'text-white'}`}>
-              Full Name of user
+            <p
+              className={`text-sm ${
+                brightness ? 'text-slate-700' : 'text-slate-400'
+              }`}
+            >
+              Last message of user1
             </p>
-            <p className={`text-sm ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>Last message of user1</p>
           </div>
         </div>
-        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>MsgTime</p>
-      </div>
-      <div className="mt-4 flex justify-between mx-5 items-center">
-        <div className="flex justify-between gap-x-3">
-          <img
-            src={image}
-            className="rounded-full w-10 h-10 relative"
-            alt="userImg"
-          />
-          <div>
-            <p className={`text-base font-semibold ${brightness ? 'text-black' : 'text-white'}`}>
-              Full Name of user
-            </p>
-            <p className={`text-sm ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>Last message of user1</p>
-          </div>
-        </div>
-        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>MsgTime</p>
-      </div>
-      <div className="mt-4 flex justify-between mx-5 items-center">
-        <div className="flex justify-between gap-x-3">
-          <img
-            src={image}
-            className="rounded-full w-10 h-10 relative"
-            alt="userImg"
-          />
-          <div>
-            <p className={`text-base font-semibold ${brightness ? 'text-black' : 'text-white'}`}>
-              Full Name of user
-            </p>
-            <p className={`text-sm ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>Last message of user1</p>
-          </div>
-        </div>
-        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>MsgTime</p>
-      </div>
-      <div className="mt-4 flex justify-between mx-5 items-center">
-        <div className="flex justify-between gap-x-3">
-          <img
-            src={image}
-            className="rounded-full w-10 h-10 relative"
-            alt="userImg"
-          />
-          <div>
-            <p className={`text-base font-semibold ${brightness ? 'text-black' : 'text-white'}`}>
-              Full Name of user
-            </p>
-            <p className={`text-sm ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>Last message of user1</p>
-          </div>
-        </div>
-        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>MsgTime</p>
+        <p className={` ${brightness ? 'text-slate-700' : 'text-slate-400'}`}>
+          MsgTime
+        </p>
       </div>
     </div>
   )

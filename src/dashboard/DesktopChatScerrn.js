@@ -7,7 +7,7 @@ const DesktopChatScerrn = () => {
 
   return (
     <div
-      className=' hidden md:block'
+      className='hidden md:block'
       // className={`${chatDisplay ? 'block' : 'hidden'} md:block overflow-y-auto overscroll-y-auto px-3 py-3`}
     >
       <p>
