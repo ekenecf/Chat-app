@@ -8,14 +8,17 @@ body {
   font-family: 'Lato' 'Poppins' 'Roboto';
 }
 
-
-@media only screen and (min-width: 410px) and (max-width: 767px) {
+/* @media only screen and (min-width: 375px) and (max-width: 768px) {
   #ChatScreenMainContainer {
-    height: 60%;
+    height: 45vh;
   }
+} */
+
+#ChatScreenMainContainer {
+  height: 50vh;
 }
 
-@media only screen and (width:425px) {
+/* @media only screen and (width:425px) {
   #ChatScreenMainContainer {
     height: 40%;
   }
@@ -25,8 +28,16 @@ body {
   #ChatScreenMainContainer {
     height: 53%;
   }
-}
+} */
 
 #ProfileComponent, #EditProfileComponent {
   height: 90%;
+}
+
+#ActiveUser::-webkit-scrollbar {
+  display: none;
+}
+
+#ChatScreenMainContainer::-webkit-scrollbar {
+  display: none;
 }

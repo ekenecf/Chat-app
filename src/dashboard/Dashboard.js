@@ -25,16 +25,17 @@ const Dashboard = () => {
 
   return (
     <div
-      className={` h-screen relative ${
+      className={`h-screen relative ${
         brightness ? 'bg-slate-100' : 'bg-slate-700'
-      }`}
+      } md:flex`}
     >
       {chatView ? (
-        <>
+        <div className='md:w-1/2 lg:w-2/5 relative'>
+          <div className=' pl-4'>
           <p
             className={`p-7 font-semibold ${
               brightness ? 'text-black' : 'text-white'
-            }  text-2xl`}
+            }  text-2xl `}
           >
             Chats
           </p>
@@ -47,8 +48,9 @@ const Dashboard = () => {
           >
             Recent
           </p>
+          </div>
           <ChatScreen />
-        </>
+        </div>
       ) : profileView ? (
         <Profile />
       ) : editProfile ? (
@@ -58,6 +60,7 @@ const Dashboard = () => {
       <DesktopChatScerrn />
 
       {summary ? <Summary /> : null}
+
       <DashboardNav />
     </div>
   )

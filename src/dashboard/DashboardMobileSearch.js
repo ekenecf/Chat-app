@@ -5,7 +5,7 @@ const DashboardMobileSearch = () => {
   const { brightness } = useSelector((state) => state.DashboardReducer)
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center md:justify-start pl-7">
       <div className="mb-3 xl:w-96 w-11/12">
         <div className="relative mb-4 flex w-full flex-wrap items-stretch">
           <input
