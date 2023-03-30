@@ -31,10 +31,10 @@ const Dashboard = () => {
     >
       {chatView ? (
         <div className='md:w-1/2 lg:w-2/5 relative'>
-          <div className=' pl-4'>
+          <div className=' pl-4 '>
           <p
-            className={`p-7 font-semibold ${
-              brightness ? 'text-black' : 'text-white'
+            className={`pl-4 py-7 font-semibold ${
+              brightness ? 'text-slate-100' : 'text-slate-300'
             }  text-2xl `}
           >
             Chats
@@ -43,7 +43,7 @@ const Dashboard = () => {
           <ActiveUsers />
           <p
             className={`mt-5 ml-5 text-lg font-semibold ${
-              brightness ? 'text-black' : 'text-white'
+              brightness ? 'text-slate-100' : 'text-slate-300'
             }`}
           >
             Recent

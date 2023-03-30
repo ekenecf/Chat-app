@@ -23,7 +23,9 @@ function DesktopChatHeader() {
           </p>
         </div>
         <div>
-            <p>
+            <p  className={`text-base font-semibold ${
+              brightness ? 'text-black' : 'text-white'
+            }`}>
                 I am waiting
             </p>
         </div>
