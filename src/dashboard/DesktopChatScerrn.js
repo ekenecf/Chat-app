@@ -8,7 +8,9 @@ const DesktopChatScerrn = () => {
 
   return (
     <div
-      className='hidden md:block py-7 px-7'
+      className={`hidden md:block py-7 px-7 ${
+        brightness ? ' bg-slate-200' : ' bg-slate-600'
+      }`}
       // className={`${chatDisplay ? 'block' : 'hidden'} md:block overflow-y-auto overscroll-y-auto px-3 py-3`}
     >
       <DesktopChatHeader />
