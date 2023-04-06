@@ -21,7 +21,7 @@ const Profile = () => {
   )
 
   return (
-    <div className=" overflow-y-auto overscroll-y-auto" id="ProfileComponent">
+    <div className=" w-full overflow-y-auto overscroll-y-auto" id="ProfileComponent">
       <div className="flex justify-between px-6 pt-7 ">
         <p
           className={`font-semibold text-xl ${

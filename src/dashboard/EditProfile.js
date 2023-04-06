@@ -30,11 +30,9 @@ const EditProfile = () => {
     brightness,
   } = useSelector((state) => state.DashboardReducer)
 
-  console.log(editLocation)
-
   return (
     <div
-      className=" overflow-y-auto overscroll-y-auto"
+      className=" w-full overflow-y-auto overscroll-y-auto"
       id="EditProfileComponent"
     >
       <div className=" px-6 pt-7 ">

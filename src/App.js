@@ -7,6 +7,7 @@ import SignUp from './auth/SignUp'
 import Home from './components/Home'
 import SignIn from './auth/SignIn'
 import Dashboard from './dashboard/Dashboard'
+import Verify from './dashboard/Verify'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/users/verifyuser/:id" element={<Verify />} />
         </Routes>
       </Router>
 </Provider>

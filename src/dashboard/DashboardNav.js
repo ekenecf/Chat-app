@@ -25,20 +25,20 @@ const DashboardNav = () => {
   const changeProfileView = () => dispatch(setProfileView())
 
   return (
-    <div className="flex h-14 px-6 justify-between items-center fixed w-full bottom-0 bg-slate-700">
+    <div className={`flex h-14 px-6 justify-between items-center fixed w-full bottom-0 ${brightness ? 'bg-slate-300' : 'bg-slate-700' } `}>
       <CgProfile
         className={`h-7 w-7 ${
-          profileView ? 'text-slate-300' : 'text-slate-900'
+          profileView ? 'text-slate-500' : 'text-slate-900'
         }`}
         onClick={() => changeProfileView()}
       />
       <BsFillChatDotsFill
-        className={`h-7 w-7 ${chatView ? 'text-slate-300' : 'text-slate-900'}`}
+        className={`h-7 w-7 ${chatView ? 'text-slate-600' : 'text-slate-900'}`}
         onClick={() => changeDisplay()}
       />
       <AiFillSetting
         className={`h-7 w-7 ${
-          editProfile ? 'text-slate-300' : 'text-slate-900'
+          editProfile ? 'text-slate-500' : 'text-slate-900'
         }`}
         onClick={() => dispatch(setEditProfile())}
       />
